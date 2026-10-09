@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Minha Loja</h1>
+        <nav class="cabecalho__menu">
+            <a href="site.de.amostra.01.html" class="cabecalho__link">Início</a>
+            <a href="produto.html" class="cabecalho__link">Produtos</a>
+            <a href="sobre.html" class="cabecalho__link">Portifolio</a>
+            <a href="#" class="cabecalho__link carrinho-icone">🛒 <span id="contador-carrinho">0</span></a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="conteudo">
+        <!-- Seção de Apresentação — sem imagem -->
+        <section class="destaque-loja">
+            <div class="destaque-texto">
+                <h2>Bem-vindo ao nosso espaço! ✨</h2>
+                <p>Conheça nossos produtos de qualidade. Tudo feito com carinho pensando em você.</p>
+                <p>Além dos produtos aqui, também podemos preparar sob encomenda! Fale conosco e conversamos sobre tudo.</p>
+            </div>
+        </section>
+
+        <!-- Produtos -->
+        <h2>Nossos Produtos</h2>
+        <p class="aviso-encomenda">Valores e detalhes podem ser combinados conosco diretamente. Também fazemos sob medida! 📦</p>
+        
+        <div class="grade-produtos">
+            <!-- Produto 1 -->
+            <div class="produto-card">
+                <img src="imagens/produto_1.png" alt="Peonia 214" class="produto-card__imagem">
+                <h3 class="produto-card__nome">Produto Legal</h3>
+                <p class="produto-card__descricao">Descrição bonita do produto, mostrando o que ele é e o que faz de especial.</p>
+                <p class="produto-card__preco">A combinar</p>
+                <button class="produto-card__botao" data-id="1" data-nome="Produto Legal" data-preco="0">
+                    Falar sobre este produto
+                </button>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="produto-card">
+                <img src="imagens/produto_2.png" alt="Malback" class="produto-card__imagem">
+                <h3 class="produto-card__nome">Outro Produto</h3>
+                <p class="produto-card__descricao">Cada item tem seu detalhe especial. Feito com dedicação e qualidade.</p>
+                <p class="produto-card__preco">A combinar</p>
+                <button class="produto-card__botao" data-id="2" data-nome="Outro Produto" data-preco="0">
+                    Falar sobre este produto
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>© 2026 Minha Loja — Feito com carinho para você 💛</p>
+    </footer>
+
+    <!-- CAIXA DO CARRINHO -->
+    <div class="carrinho-modal" id="carrinhoModal">
+        <div class="carrinho-conteudo">
+            <h3>Seus interesses 📋</h3>
+            <p class="texto-ajuda">Itens que você quer conversar conosco:</p>
+            <ul id="listaCarrinho"></ul>
+            <p class="carrinho-total">Conversamos valores juntos!</p>
+            <button id="botaoFechar" class="botao-menor">Ver mais produtos</button>
+            <button id="botaoFinalizar" class="botao-menor destaque">Entrar em contato</button>
+        </div>
+    </div>
+
+    <script src="js/carrinho.js"></script>
+</body>
+</html>
