@@ -1,0 +1,146 @@
+/* ==========================================
+   PÁGINA SOBRE — Estilo Exclusivo
+   ========================================== */
+
+/* Título da página */
+.titulo-pagina {
+  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin: 2rem 0 0.5rem;
+  color: var(--cor-texto);
+}
+
+.subtitulo {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+/* ==========================================
+   BLOCO PADRÃO — Cada seção de projeto
+   ========================================== */
+.projeto-projetos {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+/* Imagem */
+.projeto-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.projeto-imagem img:hover {
+  transform: scale(1.02);
+}
+
+/* Texto */
+.projeto-texto h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--cor-principal);
+}
+
+.projeto-texto p {
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  color: #4b5563;
+}
+
+/* Lista de recursos */
+.recursos-lista {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.recursos-lista li {
+  padding: 0.35rem 0;
+  color: #374151;
+}
+
+/* Botão de ver projeto */
+.botao-ver {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--cor-principal);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.botao-ver:hover {
+  background: #1d4ed8;
+}
+
+/* ==========================================
+   LAYOUT 1 → Esquerda imagem, direita texto
+   ========================================== */
+.projeto-esq-dir {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ==========================================
+   LAYOUT 2 → Centralizado
+   ========================================== */
+.projeto-centro {
+  justify-content: center;
+  text-align: center;
+}
+
+.projeto-centro .projeto-conteudo-centro {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projeto-centro .projeto-texto {
+  max-width: 600px;
+}
+
+.projeto-centro .recursos-lista {
+  display: inline-block;
+  text-align: left;
+}
+
+/* ==========================================
+   LAYOUT 3 → Direita imagem, esquerda texto
+   ========================================== */
+.projeto-dir-esq {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ==========================================
+   RESPONSIVO — Ajusta para celular
+   ========================================== */
+@media (max-width: 48rem) {
+  .projeto-esq-dir,
+  .projeto-dir-esq {
+    grid-template-columns: 1fr; /* empilha tudo */
+  }
+
+  /* No celular, inverte a ordem do bloco 3 para texto primeiro */
+  .projeto-dir-esq {
+    direction: rtl;
+  }
+  .projeto-dir-esq > * {
+    direction: ltr;
+  }
+}
+
+/* Marca a página ativa no menu */
+.cabecalho__link.ativo {
+  border-bottom: 2px solid white;
+  font-weight: bold;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- Estilo ESPECIAL desta página -->
+    <link rel="stylesheet" href="css/sobre.css">
+</head>
+<body>
+
+    <!-- Cabeçalho IGUAL às outras páginas -->
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Meu Portfólio</h1>
+        <nav class="cabecalho__menu">
+            <a href="site.de.amostra.01.html" class="cabecalho__link">Início</a>
+            <a href="produtos.html" class="cabecalho__link">Produtos</a>
+            <a href="sobre.html" class="cabecalho__link ativo">Sobre</a>
+            <a href="#" class="cabecalho__link carrinho-icone">🛒 <span id="contador-carrinho">0</span></a>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <h2 class="titulo-pagina">Sobre Meus Trabalhos</h2>
+        <p class="subtitulo">Conheça alguns dos sites e projetos que desenvolvi</p>
+
+        <!-- ==========================================
+             BLOCO 1 → Imagem ESQUERDA | Texto DIREITA
+             ========================================== -->
+        <section class="projeto-projetos projeto-esq-dir">
+            <div class="projeto-imagem">
+                <img src="imagens/cozinha_sabor_e_art_portifolio.png" alt="Cozinha Sabor & Arte">
+            </div>
+            <div class="projeto-texto">
+                <h3>Cozinha Sabor & Arte</h3>
+                <p>Site completo de e-commerce desenvolvido para marca de perfumes. Design responsivo, carrinho de compras funcional e navegação intuitiva para todas as telas — celular, tablet e computador.</p>
+                <ul class="recursos-lista">
+                    <li>✅ Layout responsivo</li>
+                    <li>✅ Carrinho persistente</li>
+                    <li>✅ Código organizado e escalável</li>
+                </ul>
+                <a href="cozinha_sabor_&_arte.html" class="botao-ver">Ver Projeto →</a>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             BLOCO 2 → Tudo CENTRALIZADO
+             ========================================== -->
+        <section class="projeto-projetos projeto-centro">
+            <div class="projeto-conteudo-centro">
+                <div class="projeto-imagem">
+                    <img src="imagens/castata_paes_e_doces_portifolio.png" alt="Cascata Pães e Doces">
+                </div>
+                <div class="projeto-texto">
+                    <h3>Cascata Pães e Doces</h3>
+                    <p>Site criado para apresentação de trabalhos e serviços. Foco em visualização limpa, velocidade e experiência do usuário. Estrutura preparada para adicionar novos projetos facilmente.</p>
+                    <ul class="recursos-lista">
+                        <li>✅ Estrutura modular</li>
+                        <li>✅ Design moderno e elegante</li>
+                        <li>✅ Fácil de atualizar</li>
+                    </ul>
+                    <a href="Cascata Pães e Doces.html" class="botao-ver">Ver Projeto →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             BLOCO 3 → Texto ESQUERDA | Imagem DIREITA
+             ========================================== -->
+        <section class="projeto-projetos projeto-dir-esq">
+            <div class="projeto-texto">
+                <h3>Espaço Bela Vida</h3>
+                <p>Projeto voltado para beleza, bem-estar, cuidados com o corpo e autoestima.</p>
+                <ul class="recursos-lista">
+                    <li>✅ Identidade visual alinhada</li>
+                    <li>✅ Navegação simplificada</li>
+                    <li>✅ Preparado para e-commerce</li>
+                </ul>
+                <a href="espaço_bela_vida.html" class="botao-ver">Ver Projeto →</a>
+            </div>
+            <div class="projeto-imagem">
+                <img src="imagens/espaço_bela_vida_portifolio.png" alt="Loja de Produtos Naturais — Projeto 3">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Caixa do Carrinho -->
+    <div class="carrinho-modal" id="carrinhoModal">
+        <div class="carrinho-conteudo">
+            <h3>Seu Carrinho 🛒</h3>
+            <ul id="listaCarrinho"></ul>
+            <p class="carrinho-total">Total: R$ <span id="valorTotal">0,00</span></p>
+            <button id="botaoFechar" class="botao-menor">Continuar Comprando</button>
+            <button id="botaoFinalizar" class="botao-menor destaque">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <p>© 2026 Meu Portfólio — Desenvolvido com dedicação 💻</p>
+    </footer>
+
+    <script src="js/carrinho.js"></script>
+</body>
+</html>

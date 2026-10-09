@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Cozinha Sabor & Arte — Refeições Caseiras</title>
+<meta name="description" content="Refeições saborosas, feitas com ingredientes selecionados e muito carinho. Venha nos visitar!">
+<style>
+:root{
+  --terracota:#8B4513;
+  --dourado:#D4A84B;
+  --creme:#FFFAF0;
+  --marrom:#5C3A21;
+  --folha:#556B2F
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  -webkit-tap-highlight-color:transparent
+}
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:var(--creme);
+  color:var(--marrom);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased
+}
+header{
+  background:linear-gradient(135deg,var(--terracota),#6B3410);
+  color:white;
+  padding:15px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100
+}
+.logo{
+  font-family:Georgia,serif;
+  font-size:clamp(22px,5vw,28px);
+  line-height:1.1
+}
+.logo span{
+  display:block;
+  color:var(--dourado);
+  font-style:italic;
+  font-size:clamp(14px,3vw,17px)
+}
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 18px;
+  justify-content:center
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  padding:5px 4px;
+  font-size:clamp(14px,2.5vw,16px)
+}
+nav a:hover{color:var(--dourado)}
+.hero{
+  min-height:100vh;
+  padding:clamp(80px,10vw,120px) 5%;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(rgba(92,58,33,.75),rgba(92,58,33,.45)),
+              url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  color:white
+}
+.hero div{max-width:600px}
+.hero h1{
+  font:clamp(34px,7vw,64px) Georgia,serif;
+  line-height:1.1;
+  margin-bottom:20px
+}
+.hero h1 span{color:var(--dourado);font-style:italic}
+.hero p{font-size:clamp(17px,3.5vw,20px);margin-bottom:30px}
+.botao{
+  display:inline-block;
+  background:var(--dourado);
+  color:var(--terracota);
+  padding:14px 28px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  min-height:48px;
+  transition:transform .2s
+}
+.botao:active{transform:scale(.97)}
+.botao.secundario{
+  background:transparent;
+  border:2px solid white;
+  color:white;
+  margin-left:10px
+}
+section{padding:clamp(50px,8vw,80px) 5%}
+h2{
+  font:clamp(28px,5vw,40px) Georgia,serif;
+  text-align:center;
+  color:var(--terracota);
+  margin-bottom:clamp(30px,5vw,45px)
+}
+.sobre{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(30px,5vw,50px);
+  align-items:center
+}
+.sobre img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,.1)
+}
+.sobre-texto h2{text-align:left}
+.destaques{
+  background:#fff;
+  text-align:center
+}
+.destaques-lista{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px
+}
+.destaque-item{
+  padding:25px;
+  border-radius:12px;
+  background:var(--creme)
+}
+.destaque-item .icone{font-size:40px;margin-bottom:10px}
+.cardapio{background:#F8F0E5}
+.pratos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px
+}
+.prato{
+  background:white;
+  text-align: center;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,.06)
+}
+.prato img{
+  width:100%;
+  height:180px;
+  object-fit:cover
+}
+.prato div{padding:20px}
+.prato h3{color:var(--terracota);margin-bottom:8px}
+.preco{
+  color:var(--folha);
+  text-align: center;
+  font-weight:bold;
+  font-size:19px;
+  margin-top:10px
+}
+.info{
+  background:var(--marrom);
+  color:white;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(30px,5vw,50px)
+}
+.info h2{color:white;text-align:left}
+.info a{color:var(--dourado);text-decoration:none}
+footer{
+  background:#3A2414;
+  color:white;
+  text-align:center;
+  padding:30px 5%
+}
+@media(max-width:750px){
+  header{flex-direction:column;gap:10px}
+  .sobre,.info{grid-template-columns:1fr}
+  .sobre-texto h2,.info h2{text-align:center}
+  .botao{display:block;text-align:center;margin:8px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Cozinha Sabor & Arte</div>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#contato">Contato</a>
+    <a href="sobre.html" class="cabecalho__link">Portifolio</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div>
+      <h1>Comida caseira,<br><span>amor em cada prato</span></h1>
+      <p>Pratos preparados com ingredientes selecionados, receitas de família e todo o carinho que você merece.</p>
+      <a class="botao" href="#cardapio">Ver Nosso Cardápio</a>
+      <a class="botao secundario" href="#contato">Como Chegar</a>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <img src="imagens/cozinha-foto.jpg" alt="Ambiente acolhedor da Cozinha Sabor e Arte">
+    <div class="sobre-texto">
+      <h2>Nossa História</h2>
+      <p>Nascemos do amor pela cozinha e do desejo de levar até você o sabor autêntico da comida feita em casa.</p>
+      <p>Cada prato é preparado no dia, com ingredientes frescos e sem pressa. Acreditamos que uma boa refeição vai além do alimento — é momento, é partilha, é carinho.</p>
+      <p><strong>Venha nos visitar e sentir-se em casa! 🍽️</strong></p>
+    </div>
+  </section>
+
+  <section class="destaques">
+    <h2>Por que escolher a gente?</h2>
+    <div class="destaques-lista">
+      <div class="destaque-item">
+        <div class="icone">🥗</div>
+        <h3>Ingredientes Frescos</h3>
+        <p>Sempre produtos de qualidade, escolhidos com cuidado.</p>
+      </div>
+      <div class="destaque-item">
+        <div class="icone">👩‍🍳</div>
+        <h3>Feito à Mão</h3>
+        <p>Nada industrializado, tudo preparado aqui.</p>
+      </div>
+      <div class="destaque-item">
+        <div class="icone">🏡</div>
+        <h3>Ambiente Familiar</h3>
+        <p>Confortável, limpo e acolhedor para você.</p>
+      </div>
+      <div class="destaque-item">
+        <div class="icone">💰</div>
+        <h3>Preço Justo</h3>
+        <p>Qualidade que cabe no bolso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cardapio" id="cardapio">
+    <h2>Destaques do Nosso Cardápio</h2>
+    <div class="pratos">
+      <div class="prato">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Prato Feito Completo">
+        <h3>Prato Feito Completo</h3>
+        <p>Arroz, feijão, carne, legumes e salada fresca.</p>
+        <p class="preco">R$ 28,90</p>
+      </div>
+      <div class="prato">
+        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80" alt="Feijoada Completa">
+        <h3>Feijoada Completa</h3>
+        <p>Tradicional, servida com couve, farofa e laranja.</p>
+        <p class="preco">R$ 35,00</p>
+      </div>
+      <div class="prato">
+        <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=600&q=80" alt="Sobremesa Caseira">
+        <h3>Sobremesa do Dia</h3>
+        <p>Doces caseiros — pudim, torta, mousse. Pergunte-nos!</p>
+        <p class="preco">A partir de R$ 8,00</p>
+      </div>
+      <div class="prato">
+        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Café e Suco Natural">
+        <h3>Bebidas Naturais</h3>
+        <p>Sucos de frutas, café fresco, água e refrigerantes.</p>
+        <p class="preco">A partir de R$ 5,00</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="contato">
+    <div>
+      <h2>Horário de Funcionamento</h2>
+      <p>🕐 Segunda a Sexta: <strong>11h às 15h</strong></p>
+      <p>🕐 Sábado: <strong>11h às 14h</strong></p>
+      <p>❌ Domingo: Fechado</p>
+      <br>
+      <p>📍 Rua Exemplo, 123 — Bairro Centro<br>Guarulhos / SP</p>
+      <p>📞 (11) 9XXXX-XXXX</p>
+    </div>
+    <div>
+      <h2>Venha nos Visitar!</h2>
+      <p>Estamos prontos para receber você e sua família com um sorriso e uma comida deliciosa. 😊</p>
+      <br>
+      <p><a href="#">📍 Ver no Mapa — Clique Aqui!</a></p>
+      <p>Acompanhe nossas redes: @cozinhasaborearte</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 Cozinha Sabor & Arte — Com carinho, para você. ❤️
+</footer>
+
+</body>
+</html>
